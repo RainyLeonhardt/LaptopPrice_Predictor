@@ -7,6 +7,11 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 COPY . /app
 
+# Install gcc and other dependencies
+RUN apt-get update && apt-get install -y \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*
+
 # Upgrade pip
 RUN pip install --upgrade pip
 
