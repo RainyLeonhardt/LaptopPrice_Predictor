@@ -1,12 +1,6 @@
 # Start with a base image containing Python runtime
 FROM python:3.9.7-slim-buster
 
-# Set the working directory in the Docker image
-WORKDIR /app
-
-# Copy the current directory contents into the container at /app
-COPY . /app
-
 # Install the dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
