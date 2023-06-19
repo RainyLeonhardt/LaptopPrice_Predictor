@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import pickle
 
+
 file1 = open('pipe.pkl', 'rb')
 rf = pickle.load(file1)
 file1.close()
